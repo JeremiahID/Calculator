@@ -38,14 +38,17 @@ Operators.forEach(op => {
     op.addEventListener("click", e => {
         if (e.target.innerText !== "=") { // If the operator is not equals
             operator = e.target.innerText;
-            firstNum += operator
-            input.value = firstNum
+            firstNum += operator // aapend the  first number to the operator sign
+            input.value = firstNum // displaying the appeneded first number to the scrren
 
             console.log(firstNum); // Print the first number
             console.log(operator); // Print the operator
 
         } else { // If equals button clicked
             console.log(secondNum); // Print 2nd number
+            firstNum += operator // aapend the  first number to the operator sign
+            input.value = firstNum // displaying the appeneded first number to the scrren
+
 
             switch (operator) { // Calculate and print output
                 case "+":
