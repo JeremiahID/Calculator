@@ -78,11 +78,11 @@ Operators.forEach(op => {
 
                 default:
                     break;
-                }
             }
+        }
     
-        });
     });
+});
 
 
 
@@ -94,8 +94,6 @@ Clear.addEventListener('click', () =>{
     secondNum = ""; // setting the variable to be empty
     operator = ""; // setting the variable to be empty
 });
-
-
 
 
 
