@@ -31,6 +31,7 @@ numbers.forEach(number => {
 });
 
 
+
 // Operators.forEach(op => {
 //     op.addEventListener("click", e => {
 //         operator = e.target.innerText;
