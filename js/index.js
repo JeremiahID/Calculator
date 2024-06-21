@@ -75,10 +75,14 @@ Operators.forEach(op => {
                     input.value = valueToShow
                     break;
                 
-
                 default:
                     break;
+
+
+                  
             }
+
+         
         }
     
     });
