@@ -1,4 +1,4 @@
-const input = document.querySelector('#cal_screen');
+const input = document.querySelector('#cal_screen'); // assigning a  variable to a the calulator screen
 const numbers = document.querySelectorAll('#number');
 const Operators = document.querySelectorAll('#operator');
 const Clear = document.querySelector('#clear');
@@ -17,6 +17,7 @@ numbers.forEach(number => {
         } else { // Read second number
             secondNum += e.target.innerText;
             input.value = secondNum
+            console.log(secondNum)
             
         }
     });
@@ -40,14 +41,13 @@ Operators.forEach(op => {
             operator = e.target.innerText;
             firstNum += operator // aapend the  first number to the operator sign
             input.value = firstNum // displaying the appeneded first number to the scrren
+            secondNum = firstNum + secondNum // appending the second number to the first on the cal screen
 
             console.log(firstNum); // Print the first number
             console.log(operator); // Print the operator
 
         } else { // If equals button clicked
-            console.log(secondNum); // Print 2nd number
-            firstNum += operator // aapend the  first number to the operator sign
-            input.value = firstNum // displaying the appeneded first number to the scrren
+
 
 
             switch (operator) { // Calculate and print output
@@ -89,79 +89,12 @@ Operators.forEach(op => {
 
 // this is the scrpting for the clears
 Clear.addEventListener('click', () =>{
-    input.value = "";
-    firstNum = "";
-    secondNum = "";
+    input.value = ""; // setting the screen to be empty
+    firstNum = ""; // setting the variable to be empty
+    secondNum = ""; // setting the variable to be empty
+    operator = ""; // setting the variable to be empty
 });
 
-
-
-
-// code from  stack overflow
-
-
-// let firstNum = "";
-// let secondNum = "";
-// let operator = "";
-
-// numbers.forEach(number => {
-//     number.addEventListener("click", e => {
-//         if (operator === "") { // Read first number if no operator set yet
-//             firstNum += e.target.innerText;
-//             console.log(firstNum)
-//         } else { // Read second number
-//             secondNum += e.target.innerText;
-//             console.log(secondNum)
-//         }
-//     });
-// });
-
-// operators.forEach(op => {
-//     op.addEventListener("click", e => {
-//         operator = e.target.innerText;
-//         console.log(operator)
-//         // If equals operator, perform operation
-//     });
-// });
-
-// stack over flow second layer
-
-// numbers.forEach(number => {
-//     number.addEventListener("click", e => {
-//         if (operator === "") { // Read first number if no operator set yet
-//             firstNum += e.target.innerText;
-//         } else { // Read second number
-//             secondNum += e.target.innerText;
-//         }
-//     });
-// });
-
-// operators.forEach(op => {
-//     op.addEventListener("click", e => {
-//         if (e.target.innerText !== "=") { // If the operator is not equals
-//             operator = e.target.innerText;
-
-//             console.log(firstNum); // Print the first number
-//             console.log(operator); // Print the operator
-
-//         } else { // If equals button clicked
-//             console.log(secondNum); // Print 2nd number
-
-//             switch (operator) { // Calculate and print output
-//                 case "+":
-//                     console.log(parseInt(firstNum) + parseInt(secondNum));
-//                     break;
-
-//                 case "-":
-//                     console.log(parseInt(firstNum) - parseInt(secondNum));
-//                     break;
-
-//                 // etc...
-
-//                 default:
-//                     break;
-//             }
-//         }
 
 
 
