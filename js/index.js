@@ -112,15 +112,6 @@ Clear.addEventListener('click', () =>{
 
 
 
-// this is the Scripting for the Arithimetic symbols
-
-// function valueToShowAdd(numberOne, numberTwo){
-
-//     numberOne = 
-//     show = numberOne + numberTwo
-//     return show
-// }
-
 
 // Add.addEventListener('click', (numberOne, numberTwo, e) =>{
 //     let valueToAppend = '+';
