@@ -6,6 +6,7 @@ const Clear = document.querySelector('#clear');
 let firstNum = "";
 let secondNum = "";
 let operator = "";
+let anotherOperator = ""
 
 
 numbers.forEach(number => {
@@ -14,9 +15,15 @@ numbers.forEach(number => {
             firstNum += e.target.innerText;
             input.value = firstNum
             console.log(firstNum)
-        } else { // Read second number
+
+        } else if (operator === "+" || operator === "-"|| operator === "*" || operator === "/" ){
+            input.value  = "";
             secondNum += e.target.innerText;
             input.value = secondNum
+            console.log(secondNum)
+
+        } else { // Read second number
+
             console.log(secondNum)
             
         }
@@ -75,6 +82,7 @@ Operators.forEach(op => {
                     input.value = valueToShow
                     break;
                 
+
                 default:
                     break;
 
